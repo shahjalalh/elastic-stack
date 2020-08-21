@@ -34,6 +34,27 @@ services:
     networks:
       - elknet
     restart: always
+  
+#    logstash:
+#      image: logstash:7.9.0
+#      configs:
+#        - source: logstash_config
+#          target: /usr/share/logstash/config/logstash.yml
+#        - source: logstash_pipeline
+#          target: /usr/share/logstash/pipeline/logstash.conf
+#      environment:
+#        - LS_JAVA_OPTS: "-Xmx256m -Xms256m"
+#        - ELASTICSEARCH_HOSTS: http://elasticsearch:9200
+#        - xpack.monitoring.elasticsearch.hosts: [ "http://elasticsearch:9200" ]
+#        - xpack.monitoring.enabled: false
+#      ports:
+#        - "5000:5000"
+#        - "9600:9600"
+#      depends_on:
+#        - elasticsearch
+#      networks:
+#        - elknet
+#      restart: always
 
 volumes:
   elasticsearch-data:

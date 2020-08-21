@@ -1,4 +1,4 @@
-# ELK Stack — Elasticsearch, Logstash, and Kibana.
+# Elastic Stack — Elasticsearch, Logstash, and Kibana.
 
 Running the elastic search
 ```
